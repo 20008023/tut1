@@ -12,7 +12,7 @@ public class Greeter {
   }
 
   public String sayHello() {
-    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
+    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle_en_NZ", locale);
     return messages.getString("greeting") + ", " + name;
   }
 
@@ -21,6 +21,7 @@ public class Greeter {
     String country = args[1];
     String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
+    
     System.out.println(greeter.sayHello());
   }
 }
